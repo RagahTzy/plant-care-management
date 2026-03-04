@@ -1,17 +1,18 @@
-<nav class="glass-navbar fixed w-full z-50 px-10 py-4 flex justify-between items-center border-b border-green-500/20">
+<nav class="glass-navbar fixed w-full z-50 px-10 py-5 flex justify-between items-center">
 
-    <div class="text-2xl font-bold neon-text">
-        🌿 PlantCare
+    <h1 class="text-2xl font-semibold accent-text soft-glow">
+        PlantCare
+    </h1>
+
+    <div class="space-x-8 hidden md:flex items-center">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="{{ route('login') }}" class="nav-link">Login</a>
+
+        <a href="{{ route('register') }}"
+           class="px-5 py-2 rounded-xl btn-modern">
+            Get Started
+        </a>
     </div>
 
-    <div class="space-x-8">
-        <a href="#features" class="hover:text-green-400 transition duration-300">
-            Features
-        </a>
-
-        <a href="{{ route('login') }}"
-           class="px-5 py-2 border border-green-500 rounded-lg neon-border hover:bg-green-500 hover:text-black transition duration-300">
-           Login
-        </a>
-    </div>
 </nav>
