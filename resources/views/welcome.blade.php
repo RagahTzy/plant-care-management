@@ -1,126 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>PlantCare Management</title>
-    @vite('resources/css/app.css')
+@extends('layouts.app')
 
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <style>
-        .neon-text {
-            text-shadow:
-                0 0 5px #22c55e,
-                0 0 10px #22c55e,
-                0 0 20px #16a34a,
-                0 0 40px #16a34a;
-        }
-
-        .neon-border {
-            box-shadow:
-                0 0 10px #22c55e,
-                0 0 20px rgba(34,197,94,0.5);
-        }
-    </style>
-</head>
-
-<body class="bg-black text-white scroll-smooth">
-
-<x-navbar />
+@section('content')
 
 <!-- HERO -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32">
 
     <h1 class="text-6xl font-extrabold neon-text mb-6" data-aos="fade-down">
-        PlantCare Management
+        Smart Plant Management
     </h1>
 
     <p class="text-gray-300 max-w-2xl mb-10 text-lg" data-aos="fade-up">
-        Smart system to track plant growth and manage maintenance schedules
-        with elegance and precision.
+        Manage maintenance schedules, track plant growth,
+        and monitor health in one futuristic platform.
     </p>
 
-    <a href="/login"
+    <a href="{{ route('login') }}"
        class="px-10 py-4 rounded-xl border border-green-500 neon-border hover:bg-green-500 hover:text-black transition duration-500"
        data-aos="zoom-in">
        Get Started
     </a>
+
 </section>
 
 <!-- FEATURES -->
-<section class="py-32 px-6 bg-gradient-to-b from-black to-gray-900">
+<section id="features" class="py-24 px-10 text-center">
 
-    <h2 class="text-4xl font-bold text-center mb-20 neon-text" data-aos="fade-up">
-        Core Features
+    <h2 class="text-4xl font-bold neon-text mb-16" data-aos="fade-up">
+        Features
     </h2>
 
-    <div class="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-10">
 
-        <!-- Track Growth -->
-        <div class="bg-white/5 backdrop-blur-lg p-12 rounded-3xl border border-green-500/20 neon-border hover:scale-105 transition duration-500"
-             data-aos="fade-right">
-
-            <div class="text-5xl mb-6">🌱</div>
-
-            <h3 class="text-2xl font-bold mb-4 text-green-400">
-                Track Growth
-            </h3>
-
-            <p class="text-gray-400 leading-relaxed">
-                Record plant height and condition over time.
-                Monitor progress visually and maintain detailed history logs.
+        <div class="p-8 border border-green-500/30 rounded-2xl hover:scale-105 transition duration-500"
+             data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-2xl font-bold mb-4">🌿 Growth Tracking</h3>
+            <p class="text-gray-400">
+                Record and analyze plant growth progress easily.
             </p>
-
         </div>
 
-        <!-- Maintenance -->
-        <div class="bg-white/5 backdrop-blur-lg p-12 rounded-3xl border border-green-500/20 neon-border hover:scale-105 transition duration-500"
-             data-aos="fade-left">
-
-            <div class="text-5xl mb-6">💧</div>
-
-            <h3 class="text-2xl font-bold mb-4 text-green-400">
-                Maintenance Schedule
-            </h3>
-
-            <p class="text-gray-400 leading-relaxed">
-                Organize watering and fertilizing schedules.
-                Never miss a plant care routine again.
+        <div class="p-8 border border-green-500/30 rounded-2xl hover:scale-105 transition duration-500"
+             data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-2xl font-bold mb-4">🛠 Maintenance Schedule</h3>
+            <p class="text-gray-400">
+                Set watering and fertilizing reminders automatically.
             </p>
+        </div>
 
+        <div class="p-8 border border-green-500/30 rounded-2xl hover:scale-105 transition duration-500"
+             data-aos="fade-up" data-aos-delay="300">
+            <h3 class="text-2xl font-bold mb-4">📊 Analytics</h3>
+            <p class="text-gray-400">
+                Get visual insights to optimize plant care.
+            </p>
         </div>
 
     </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 px-10 text-center">
+
+    <h2 class="text-4xl font-bold neon-text mb-10" data-aos="fade-up">
+        About The System
+    </h2>
+
+    <p class="max-w-3xl mx-auto text-gray-400 text-lg" data-aos="fade-up" data-aos-delay="200">
+        PlantCare Management System is designed to help plant owners
+        monitor, maintain, and optimize plant health using structured data
+        and smart scheduling features.
+    </p>
+
 </section>
 
 <!-- CTA -->
-<section class="py-32 text-center bg-black">
+<section class="py-24 text-center">
 
-    <h2 class="text-4xl font-bold mb-10 neon-text" data-aos="zoom-in">
-        Start Managing Your Plants Today
+    <h2 class="text-4xl font-bold neon-text mb-8" data-aos="zoom-in">
+        Ready to Start?
     </h2>
 
-    <a href="/register"
-       class="px-12 py-4 rounded-xl border border-green-500 neon-border hover:bg-green-500 hover:text-black transition duration-500"
-       data-aos="fade-up">
+    <a href="{{ route('register') }}"
+       class="px-12 py-5 border border-green-500 rounded-xl neon-border hover:bg-green-500 hover:text-black transition duration-500"
+       data-aos="zoom-in">
        Create Account
     </a>
+
 </section>
 
-<!-- FOOTER -->
-<footer class="py-10 text-center text-gray-500 bg-black border-t border-green-500/20">
-    © {{ date('Y') }} PlantCare Management
-</footer>
-
-<!-- AOS Script -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1000,
-        once: true
-    });
-</script>
-
-</body>
-</html>
+@endsection
