@@ -108,5 +108,3 @@ Proyek ini dirilis di bawah lisensi MIT — bebas digunakan, dimodifikasi, dan d
 ## ❤️ Support
 
 Kalau kamu suka dengan proyek ini, silakan beri ⭐ di GitHub dan bagikan ke teman‑temanmu yang suka tanaman atau programmer lainnya! 🌱✨
-
-```
