@@ -1,4 +1,3 @@
-````markdown
 # 🌿 PlantCare Management
 
 **PlantCare Management** adalah aplikasi web untuk membantu pengguna dalam mengelola dan memantau kondisi serta perawatan tanaman dengan cara yang efisien, terstruktur, dan terorganisir. Proyek ini dibangun menggunakan **Laravel** sebagai backend dan Tailwind CSS untuk frontend, serta dirancang sebagai solusi digital untuk pecinta tanaman yang ingin mengatur jadwal perawatan dan melihat perkembangan tanaman secara terpusat.
@@ -35,7 +34,7 @@ Ikuti langkah di bawah ini untuk mengunduh dan menjalankan proyek ini secara lok
 1. **Clone repository**
    ```bash
    git clone https://github.com/RagahTzy/plant-care-management.git
-````
+
 
 2. **Masuk ke folder proyek**
 
